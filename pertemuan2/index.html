@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TPM Pertemuan-2</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @keyframes changing-color {
+        0% {
+          color: rgb(35, 207, 184);
+          transform: translate(0, 0);
+        }
+        50% {
+          color: rosybrown;
+          transform: translate(0, 25%);
+          font-size: 80px;
+        }
+        100% {
+          color: red;
+        }
+      }
+
+      h1 {
+        font-family: "montserrat";
+      }
+
+      .flex {
+        width: 500px;
+        height: 500px;
+        background-color: red;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .transfrom {
+        animation-name: changing-color;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-delay: 3s;
+      }
+
+      .hover:hover {
+        background-color: seagreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>TPM Pertemuan-2</h1>
+    <i class="fa fa-address-book"></i>
+    <div>
+      <div class="transfrom">Mutiara div</div>
+      <span class="hover">tia span</span>
+      <div class="hover">tia di p</div>
+    </div>
+    <div class="flex">
+      <p>tia 1</p>
+      <p>tia 2</p>
+      <p>tia 3</p>
+      <p>tia 4</p>
+      <p>tia 5</p>
+    </div>
+  </body>
+</html>

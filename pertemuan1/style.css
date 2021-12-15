@@ -1,0 +1,49 @@
+* {
+  padding: 10px;
+}
+.input-group {
+  background-color: antiquewhite;
+  color: red;
+  padding: 10px;
+}
+.input-group > input {
+  padding: 2px;
+}
+
+.submit-button {
+  padding: 10px;
+  margin-top: 10px;
+  color: red;
+  background-color: antiquewhite;
+}
+
+.button {
+  padding: 10px;
+  margin-top: 10px;
+  background: linear-gradient(red, yellow, green);
+}
+
+.paragraph p {
+  background-color: cadetblue;
+}
+
+.paragraph > p {
+  background-color: purple;
+}
+
+.paragraph > p:first-child {
+  background-color: yellow;
+}
+
+.paragraph + p {
+  background-color: pink;
+}
+
+.circle {
+  position: absolute;
+  background-color: pink;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  right: 0;
+}
