@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pertemuan 3</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .our-work {
+      background-color: pink;
+      min-height: 100vh;
+      padding: 3rem;
+    }
+    .our-work > h1 {
+      color: white;
+    }
+    .our-work > .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+    }
+    .image-container {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .inner-image {
+      width: 30%;
+    }
+    .inner-img-container > img {
+      width: 100%;
+    }
+    .inner-img-container {
+      width: 33%;
+    }
+    .imagepipih1 {
+      min-height: 150px;
+      background-image: url(https://images.unsplash.com/photo-1454372182658-c712e4c5a1db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80);
+      height: 48%;
+      background-size: cover;
+    }
+    .imagepipih2{
+      min-height: 150px;
+      background-image: url(t3.jfif);
+      height: 48%;
+      background-size: cover;
+      transform: rotate(180deg);
+      margin-top: 15px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .our-work {
+        background-color: antiquewhite;
+      }
+      .image-container {
+        flex-direction: column;
+      }
+      .inner-image {
+        width: 100%;
+      }
+      .inner-img-container {
+        width: 100%;
+      }
+    }
+  </style>
+  <body>
+    <section class="our-work">
+      <div class="container">
+        <h1>Our Work</h1>
+        <div class="image-container">
+          <img
+            class="inner-image"
+            src="https://images.unsplash.com/photo-1541410965313-d53b3c16ef17?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80"
+            alt="lembah"
+          />
+          <div class="inner-img-container">
+            <div class="imagepipih1"></div>
+            <div class="imagepipih2"></div>
+          </div>
+          <img
+            class="inner-image"
+            src="https://images.unsplash.com/photo-1617634667039-8e4cb277ab46?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=368&q=80"
+            alt="lembah"
+          />
+        </div>
+      </div>
+    </section>
+
+    <script>
+      //ver, let, const
+      var nama = "tia";
+      let pet = "kucing";
+      const angka = 1;
+      nama = "rahmah";
+      console.log(angka);
+
+      console.log(add(5, 10));
+
+      function add(a, b) {
+        return a + b;
+      }
+
+      const addArrow = (a, b) => {
+        return a + b;
+      };
+
+      console.log(addArrow(1, 2));
+
+      const array = [1, 2, 3, 4, 5, 6];
+
+      const looping = (number) => {
+        console.log(number);
+      };
+
+      //   array.forEach(looping);
+
+      console.log(
+        array.map((number) => {
+          return number + 1;
+        })
+      );
+
+      console.log(
+        array.filter((number) => {
+          return number > 3;
+        })
+      );
+
+      console.log(
+        array.reduce((acc, number) => {
+          return acc + number;
+        })
+      );
+    </script>
+  </body>
+</html>
