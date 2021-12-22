@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <button>hello</button>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+    //   const root = $("#root");
+    //   $("button").click(() => {
+    //       alert("clicked!!");
+    //   }) // ini untuk keluarin kaya pop-up gitu
+
+    const root = $("#root");
+      $("button").click(() => {
+          $("#root").toggle();
+      }) // ini untuk toggle (ngilangin tulisannya gitu)
+      
+
+      fetch("https://api.cookit.link/products")
+        .then((res) => res.json())
+        .then(({ data }) => {
+          //   console.log(data);
+          data.forEach((datum) => {
+            //  root.append(`Name: ${datum.name} || description: ${datum.description}`); //string interpolation
+            const newNode = document.createElement("div");
+            newNode.innerHTML = `Name: ${datum.name} || descripction: ${datum.description}`;
+            root.append(newNode);
+            root.append(document.createElement("br"));
+          });
+        });
+      (async () => {
+        const res = await fetch("https://api.cookit.link/products");
+        // console.log(await res.json())
+        const { data } = await res.json();
+        console.log(data);
+      })();
+
+      console.log("tia:");
+    </script>
+  </body>
+</html>
